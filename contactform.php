@@ -11,11 +11,11 @@
 //     mail($mailTo, $message, $txt, $headers);
 //     header("Location: index.html?mailsend");
 
-$name = $_POST['name'];
-$mail = $_POST['mail'];
-$message = $_POST['message'];
+// $name = $_POST['name'];
+// $mail = $_POST['mail'];
+// $message = $_POST['message'];
 
-$mailheader = "From:" 
+// $mailheader = "From:" 
 
 
-?>
+// ?>

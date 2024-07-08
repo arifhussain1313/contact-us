@@ -1,35 +1,13 @@
-// function sendEmail() {
-//     const name = document.getElementById('name').value;
-//     const email = document.getElementById('email').value;
-//     const message = document.getElementById('message').value;
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // prevent the form from submitting
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
 
-//     const formData = new FormData();
-//     formData.append('name', name);
-//     formData.append('email', email);
-//     formData.append('message', message);
-
-//     fetch('send_email.php', {
-//         method: 'POST',
-//         body: formData
-//     }).then(response => {
-//         if (response.ok) {
-//             alert('Message sent successfully');
-//         } else {
-//             alert('Failed to send message');
-//         }
-//     }).catch(error => {
-//         console.error('Error:', error);
-//     });
-// }
-
-// function reset() {
-//     document.getElementById('name').value = '';
-//     document.getElementById('email').value = '';
-//     document.getElementById('message').value = '';
-// }
-
-// document.getElementById('contactForm').addEventListener('submit', function(event) {
-//     event.preventDefault();
-//     sendEmail();
-//     reset();
-// });
+    if (name && email && message) {
+        alert('Email successfully sent!');
+        // You can also add code here to send the email using JavaScript and a server-side language
+    } else {
+        alert('Please fill in all the required fields!');
+    }
+});
